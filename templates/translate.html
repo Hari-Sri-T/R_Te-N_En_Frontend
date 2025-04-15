@@ -9,17 +9,17 @@
   <div class="container">
     <h1>Translate Romanized Telugu to English</h1>
     <form method="POST">
-      <textarea name="text_input" placeholder="Enter your Romanized Telugu here..." required>{{ result[0] if result else '' }}</textarea>
+      <textarea name="text_input" placeholder="Enter your Romanized Telugu here..." required>{{ result.original if result else '' }}</textarea>
       <button type="submit">Translate</button>
     </form>
 
     {% if result %}
-    <div class="result-card">
-      <p><strong>Original Input:</strong> {{ result[0] }}</p>
-      <p><strong>Cleaned:</strong> {{ result[1] }}</p>
-      <p><strong>Telugu Script:</strong> {{ result[2] }}</p>
-      <p><strong>English Translation:</strong> {{ result[3] }}</p>
-    </div>
+      <div class="result-card">
+        <p><strong>Original Input:</strong> {{ result.original }}</p>
+        <p><strong>Cleaned Text:</strong> {{ result.cleaned }}</p>
+        <p><strong>Telugu Script:</strong> {{ result.telugu }}</p>
+        <p><strong>Translated English:</strong> {{ result.translated }}</p>
+      </div>
     {% endif %}
   </div>
 </body>
