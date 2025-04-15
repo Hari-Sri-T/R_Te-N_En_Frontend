@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Romanized Telugu to English Translator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <!-- Title -->
+  <div class="title-box">
+    <h1>Romanized Telugu to English Translator</h1>
+  </div>
+
+  <!-- Project Description -->
+  <div class="description">
+    <p>
+      This project focuses on enabling seamless translation of Romanized Telugu (Telugu written in Latin script) into English. It first uses AI4Bharat's XlitEngine for accurate transliteration to native Telugu script, followed by translation using a Fine-Tuned Version of "Helsinki-NLP/opus-mt-mul-en" model which is trained to take inputs from any kind of language and give output in English. This tool aims to bridge the gap for Telugu speakers who frequently type in Roman script but seek high-quality English translations for professional, educational, and everyday use cases. <br><br>
+      We trained and evaluated the system on benchmark datasets and used robust metrics like BLEU, METEOR, ROUGE, chrF, BERTScore, COMET, and TER to ensure high-quality outputs in both direct Telugu and Romanized Telugu inputs.
+    </p>
+  </div>
+
+  <!-- Tables Side by Side -->
+  <div class="tables-container">
+    <!-- Native Telugu Table -->
+    <div class="table-wrapper">
+      <h3>Native Telugu → Native English Metrics</h3>
+      <table>
+        <tr><th>Metric</th><th>Score</th></tr>
+        <tr><td>BLEU</td><td>0.8025</td></tr>
+        <tr><td>SacreBLEU</td><td>80.2520</td></tr>
+        <tr><td>METEOR</td><td>0.8675</td></tr>
+        <tr><td>ROUGE-1</td><td>0.8880</td></tr>
+        <tr><td>ROUGE-2</td><td>0.7985</td></tr>
+        <tr><td>ROUGE-L</td><td>0.8851</td></tr>
+        <tr><td>chrF</td><td>87.1745</td></tr>
+        <tr><td>TER</td><td>13.7575</td></tr>
+        <tr><td>BERTScore Precision</td><td>0.9625</td></tr>
+        <tr><td>BERTScore Recall</td><td>0.9607</td></tr>
+        <tr><td>BERTScore F1</td><td>0.9615</td></tr>
+        <tr><td>COMET</td><td>0.9553</td></tr>
+      </table>
+    </div>
+
+    <!-- Romanised Telugu Table -->
+    <div class="table-wrapper">
+      <h3>Romanized Telugu → Native English Metrics</h3>
+      <table>
+        <tr><th>Metric</th><th>Score</th></tr>
+        <tr><td>BLEU</td><td>0.2746</td></tr>
+        <tr><td>SacreBLEU</td><td>27.4556</td></tr>
+        <tr><td>METEOR</td><td>0.6029</td></tr>
+        <tr><td>ROUGE-1</td><td>0.6209</td></tr>
+        <tr><td>ROUGE-2</td><td>0.4272</td></tr>
+        <tr><td>ROUGE-L</td><td>0.6129</td></tr>
+        <tr><td>chrF</td><td>55.6824</td></tr>
+        <tr><td>TER</td><td>53.3040</td></tr>
+        <tr><td>BERTScore Precision</td><td>0.9256</td></tr>
+        <tr><td>BERTScore Recall</td><td>0.9350</td></tr>
+        <tr><td>BERTScore F1</td><td>0.9301</td></tr>
+        <tr><td>COMET</td><td>0.7872</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- Try Our Model Button -->
+  <div class="button-container">
+    <a href="{{ url_for('translate') }}" class="try-model-button">Try Our Model</a>
+  </div>
+
+  <!-- GitHub Link in Bottom Right -->
+  <div class="github-link">
+    <a href="https://github.com/Hari-Sri-T/R_Te-N_En-Translator" target="_blank">GitHub</a>
+  </div>
+
+</body>
+</html>
