@@ -5,7 +5,7 @@ from gradio_client import Client
 app = Flask(__name__)
 
 # Initialize Gradio client
-client = Client("http://127.0.0.1:7860/")  # This is your Gradio backend URL
+client = Client("https://9718-2402-e280-3e0b-7b4-44f6-515d-168d-37b5.ngrok-free.app/")  # This is your Gradio backend URL
 
 @app.route("/")
 def index():
