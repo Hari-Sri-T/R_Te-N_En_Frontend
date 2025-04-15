@@ -22,7 +22,7 @@ def translate():
         try:
             # Send the input to the Gradio backend
             result = client.predict(
-                user_input=user_input,   # The input to send
+                [user_input],   # The input to send
                 api_name="/predict"      # API endpoint (default is "/predict")
             )
             print(f"Result from Gradio: {result}")
