@@ -65,8 +65,10 @@
 
   <!-- Try Our Model Button -->
   <div class="button-container">
-    <a href="{{ url_for('translate') }}" class="try-model-button">Try Our Model</a>
-  </div>
+  <form action="{{ url_for('translate') }}" method="POST">
+    <button type="submit" class="try-model-button">Try Our Model</button>
+  </form>
+</div>
 
   <!-- GitHub Link in Bottom Right -->
   <div class="github-link">
