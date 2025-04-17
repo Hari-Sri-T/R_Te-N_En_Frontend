@@ -15,7 +15,7 @@ def translate():
     user_input = request.form["text_input"]
     try:
         # Ensure input is passed as a list, not just a string
-        result = client.predict([user_input], api_name="/predict")
+        result = client.predict(user_input = user_input, api_name="/predict")
 
         # Assuming Gradio returns a list with the following order:
         # 0 - original input
