@@ -5,7 +5,7 @@ import requests
 app = Flask(__name__)
 
 # Your Gradio backend URL (no trailing slash)
-GRADIO_BACKEND_URL = "https://cbb8-122-15-132-69.ngrok-free.app"
+GRADIO_BACKEND_URL = "https://5dee-2402-e280-3e0b-7b4-583-faae-aba2-f440.ngrok-free.app"
 
 
 @app.route("/")
