@@ -10,7 +10,7 @@ client = Client("HackHedron/Romanized-Telugu_to_Native-English_Translator")
 def index():
     return render_template("index.html")
 
-@app.route("/translate", methods=["POST"])
+@app.route("/translate", methods=["GET","POST"])
 def translate():
     user_input = request.form["text_input"]
     try:
