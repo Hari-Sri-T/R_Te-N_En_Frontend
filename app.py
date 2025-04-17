@@ -14,8 +14,14 @@ def index():
 def translate():
     user_input = request.form["text_input"]
     try:
-        result = client.predict(user_input, api_name="/predict")
+        # Ensure input is passed as a list, not just a string
+        result = client.predict([user_input], api_name="/predict")
 
+        # Assuming Gradio returns a list with the following order:
+        # 0 - original input
+        # 1 - cleaned text
+        # 2 - Telugu script
+        # 3 - translated English text
         return render_template("translate.html", result={
             "original": result[0],
             "cleaned": result[1],
@@ -29,4 +35,3 @@ def translate():
 
 if __name__ == "__main__":
     app.run(debug=True)
-
