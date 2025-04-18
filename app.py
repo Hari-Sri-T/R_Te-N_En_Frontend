@@ -14,7 +14,7 @@ def translate():
     if request.method == "POST":
         user_input = request.form["text_input"]
         try:
-            result = client.predict(user_input=user_input, api_name="/predict")
+            result = client.predict(user_input, api_name="/predict")
             return render_template("translate.html", result={
                 "original": result[0],
                 "cleaned": result[1],
