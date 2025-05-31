@@ -11,7 +11,7 @@ hf_token = os.getenv("HF_TOKEN")  # Make sure you have added this env variable o
 login(token=hf_token)
 
 # Initialize Gradio client for your Space
-client = Client("HackHedron/Romanized-Telugu_to_Native-English_Translator")
+client = Client("HackHedron/Romanized-Telugu_to_Native-English_Translator", hf_token=HF_TOKEN)
 
 @app.route("/")
 def index():
