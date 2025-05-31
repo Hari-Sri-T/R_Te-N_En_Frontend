@@ -6,9 +6,8 @@ import os
 
 app = Flask(__name__)
 
-# Login using  token 
-hf_token = os.getenv("HF_TOKEN")  # Make sure you have added this env variable on Render
-login(token=hf_token)
+
+HF_TOKEN = os.environ.get("HF_TOKEN")
 
 # Initialize Gradio client for your Space
 client = Client("HackHedron/Romanized-Telugu_to_Native-English_Translator", hf_token=HF_TOKEN)
