@@ -10,7 +10,7 @@ app = Flask(__name__)
 HF_TOKEN = os.environ.get("HF_TOKEN")
 
 # Initialize Gradio client for your Space
-client = Client("https://huggingface.co/spaces/Harisri/Romanized-Telugu_to_Native-English_Translator", hf_token=HF_TOKEN)
+client = Client("Harisri/Romanized-Telugu_to_Native-English_Translator", hf_token=HF_TOKEN)
 
 @app.route("/")
 def index():
